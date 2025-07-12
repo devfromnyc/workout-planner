@@ -1,69 +1,110 @@
-# React + TypeScript + Vite
+# 💪 WorkoutPlanner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for planning and managing workout routines. Find exercises, create workouts, and track your fitness journey with an intuitive interface.
 
-Currently, two official plugins are available:
+## 🚀 What This App Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔍 Find Exercises
 
-## Expanding the ESLint configuration
+- **Search for exercises** by name, muscle group, or difficulty level
+- **Browse by body part** - chest, legs, back, core, shoulders, or full body workouts
+- **Filter by difficulty** - beginner, intermediate, or advanced exercises
+- **Discover new exercises** with detailed information and tags
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📱 Manage Workouts
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **View your current workout** with sets, reps, and exercise details
+- **Access saved workouts** from your personal library
+- **Create new workout routines** from scratch
+- **Track workout progress** with difficulty levels and duration
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🎨 Modern Experience
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Beautiful, responsive design** that works on any device
+- **Intuitive navigation** between search and workout management
+- **Real-time search results** with exercise cards
+- **Easy-to-use interface** for fitness enthusiasts of all levels
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Built With
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React** - Modern web framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool
+- **CSS3** - Modern styling and animations
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v20.19.0 or higher)
+- npm package manager
+
+### Installation
+
+1. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Start the app**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+## 🎯 How to Use the App
+
+### Home Page - Exercise Search
+
+1. **Search for exercises** using the search bar at the top
+2. **Try searching for:**
+
+   - Muscle groups: "chest", "legs", "core", "back"
+   - Exercise names: "push-ups", "squats", "plank"
+   - Difficulty levels: "beginner", "advanced"
+   - Equipment: "bodyweight", "strength"
+
+3. **View results** in the exercise cards below
+4. **See exercise details** including muscle groups and tags
+
+### Workouts Page - Manage Your Routines
+
+1. **Switch to Workouts** using the navigation at the top
+2. **View Current Workout** tab to see your active routine
+3. **Browse Saved Workouts** tab to access your workout library
+4. **Load a workout** by clicking "Load" on any saved routine
+5. **Create new workouts** using the "Create New Workout" button
+
+## 🏋️ Exercise Categories
+
+The app includes exercises for all major muscle groups:
+
+- **Chest** - Push-ups, Diamond Push-ups, Wide Push-ups
+- **Legs** - Squats, Lunges, Calf Raises
+- **Back** - Pull-ups, Inverted Rows, Superman
+- **Core** - Plank, Crunches, Russian Twists
+- **Shoulders** - Pike Push-ups, Wall Handstand
+- **Full Body** - Burpees, Mountain Climbers, Jumping Jacks
+
+## 🎨 Features
+
+- **Smart search** that finds exercises by name or tags
+- **Muscle group organization** for easy browsing
+- **Difficulty levels** with color-coded badges
+- **Workout management** with current and saved routines
+- **Responsive design** for desktop, tablet, and mobile
+- **Modern interface** with smooth animations
+
+## 📱 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+
+---
+
+**💪 Ready to plan your perfect workout routine!**

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { exercises } from "./data/exercises";
+import Workouts from "./pages/Workouts";
 import "./App.css";
 
 interface Exercise {
@@ -14,6 +15,7 @@ interface SearchResult {
 }
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<"home" | "workouts">("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -68,7 +70,31 @@ function App() {
       .join(", ");
   };
 
-  return (
+  // Navigation component
+  const Navigation = () => (
+    <nav className="navigation">
+      <div className="nav-content">
+        <div className="nav-brand">
+          <h1 className="nav-logo">💪 WorkoutPlanner</h1>
+        </div>
+        <div className="nav-links">
+          <button
+            className={`nav-link ${currentPage === "home" ? "active" : ""}`}
+            onClick={() => setCurrentPage("home")}>
+            Home
+          </button>
+          <button
+            className={`nav-link ${currentPage === "workouts" ? "active" : ""}`}
+            onClick={() => setCurrentPage("workouts")}>
+            Workouts
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+
+  // Home page component
+  const HomePage = () => (
     <div className="app">
       {/* Header */}
       <header className="header">
@@ -154,6 +180,13 @@ function App() {
           )}
         </div>
       </main>
+    </div>
+  );
+
+  return (
+    <div className="app-wrapper">
+      <Navigation />
+      {currentPage === "home" ? <HomePage /> : <Workouts />}
     </div>
   );
 }
