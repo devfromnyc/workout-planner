@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { exercises } from "./data/exercises";
 import Workouts from "./pages/Workouts";
 import SearchInput from "./components/SearchInput";
+import AddToWorkout from "./components/AddToWorkout";
 import "./App.css";
 
 interface Exercise {
@@ -141,12 +142,18 @@ function App() {
                   {searchResults.map((result, index) => (
                     <div key={index} className="exercise-card">
                       <div className="exercise-header">
-                        <h4 className="exercise-name">
-                          {result.exercise.name}
-                        </h4>
-                        <span className="muscle-group">
-                          {result.muscleGroup}
-                        </span>
+                        <div className="exercise-title-section">
+                          <h4 className="exercise-name">
+                            {result.exercise.name}
+                          </h4>
+                          <span className="muscle-group">
+                            {result.muscleGroup}
+                          </span>
+                        </div>
+                        <AddToWorkout
+                          exercise={result.exercise}
+                          muscleGroup={result.muscleGroup}
+                        />
                       </div>
                       <div className="exercise-tags">
                         <span className="tags-label">Tags:</span>

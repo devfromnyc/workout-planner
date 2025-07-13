@@ -335,6 +335,8 @@
 .workout-card-actions {
   display: flex;
   gap: 0.5rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .card-action-button {
@@ -345,6 +347,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .load-workout {
@@ -363,6 +366,15 @@
 
 .edit-workout:hover {
   background: #5a67d8;
+}
+
+.delete-workout {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-workout:hover {
+  background: #dc2626;
 }
 
 /* Create Workout Section */
@@ -388,6 +400,187 @@
 .create-workout-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Edit Mode Styles */
+.workout-edit-mode {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.edit-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.save-edit-button,
+.cancel-edit-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-edit-button {
+  background: #10b981;
+  color: white;
+}
+
+.save-edit-button:hover {
+  background: #059669;
+}
+
+.cancel-edit-button {
+  background: #6b7280;
+  color: white;
+}
+
+.cancel-edit-button:hover {
+  background: #4b5563;
+}
+
+.exercises-edit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exercise-edit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.exercise-edit-info {
+  flex: 1;
+}
+
+.exercise-edit-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0 0 0.25rem 0;
+}
+
+.exercise-edit-sets {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.delete-exercise-button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.delete-exercise-button:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.no-exercises {
+  text-align: center;
+  color: #718096;
+  font-style: italic;
+  padding: 1rem;
+}
+
+/* Create Workout Form */
+.create-workout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.workout-name-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.workout-name-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.create-button,
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-button {
+  background: #10b981;
+  color: white;
+}
+
+.create-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.create-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background: #6b7280;
+  color: white;
+}
+
+.cancel-button:hover {
+  background: #4b5563;
 }
 
 /* Responsive Design */
@@ -448,7 +641,6 @@
 
   .workout-card-actions {
     width: 100%;
-    justify-content: flex-end;
   }
 }
 
